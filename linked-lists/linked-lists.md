@@ -32,15 +32,16 @@ ___
 
 ## Setup
 
-* Clone down the starter code and cd into it:
+* Clone down the starter code, install dependencies, and cd into project:
 ```
-    $ git clone  //need starter link
-    $ cd // need folder name
+    $ git clone https://git.generalassemb.ly/shaw-kitajima/GA-Post-Course-CS.git
+    $ cd GA-Post-COURSE-CS
+    $ npm i
+    $ cd linked-lists
 ```
 
-* Install the testing dependencies and run the tests
+* run the tests
 ```
-    $ npm i
     $ npx mocha
 ```
 
