@@ -37,7 +37,7 @@ ___
     $ git clone https://git.generalassemb.ly/shaw-kitajima/GA-Post-Course-CS.git
     $ cd GA-Post-Course-CS/
     $ npm i
-    $ cd linked-lists
+    $ cd linked-lists/
 ```
 
 * run the tests
