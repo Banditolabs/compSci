@@ -225,7 +225,7 @@ If we were to convert this to code, it will look something like this
 // we are just saving the node to a variable
 let temp = walker.next.next;
 // point node with data of 7 to what node with data of 12 was looking at
-walker.next.next = temp.next
+walker.next = temp.next
 // point the node with data of 12 to node with data of 7
 temp.next = walker.next
 // connect walker to node with data of 12
