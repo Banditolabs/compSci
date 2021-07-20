@@ -35,7 +35,7 @@ ___
 * Clone down the starter code, install dependencies, and cd into project:
 ```
     $ git clone https://git.generalassemb.ly/shaw-kitajima/GA-Post-Course-CS.git
-    $ cd GA-Post-COURSE-CS
+    $ cd GA-Post-Course-CS/
     $ npm i
     $ cd linked-lists
 ```
