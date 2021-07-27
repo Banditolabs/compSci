@@ -90,4 +90,21 @@ describe('BinaryTree', ()=>{
         expect(tree.height(tree.root.right.right)).to.equal(1);
         expect(tree.height(tree.root.left)).to.equal(0);
     });
+    it('should correctly determine if the tree is balanced', ()=>{
+        const tree = new BinaryTree();
+        tree.insert(1);
+        expect(tree.isBalanced()).to.be.true;
+        tree.insert(3);
+        tree.insert(5);
+        expect(tree.isBalanced()).to.be.false;
+        expect(tree.isBalanced(tree.root.right)).to.be.true;
+        tree.insert(0);
+        expect(tree.isBalanced()).to.be.true;
+        tree.insert(7);
+        expect(tree.isBalanced()).to.be.false;
+        expect(tree.isBalanced(tree.root.right)).to.be.false;
+        tree.insert(-1);
+        tree.insert(-2);
+        expect(tree.isBalanced()).to.be.false;
+    });
 })
