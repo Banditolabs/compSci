@@ -167,7 +167,7 @@ factorial(2) | 2 * factorial(1)
 factorial(3) | 3 * factorial(2)
 factorial(4) | 4 * factorial(3)
 
-At this point in time, we now can "unwind" our call stack, because we actually know what the returned result for ``factorial(0)`` evaluates to. In our first unwind, we know that ``factorial(1 - 1)`` is 1, so we can now replace the return result for ``factorial(1)``
+At this point in time, we now can "unwind" our call stack, because we actually know what the returned result for ``factorial(0)`` evaluates to. In our first unwind, we know that ``factorial(0)`` is 1, so we can now replace the return result for ``factorial(1)``
 
 Stack | Return Result
 ------------ | -------------
