@@ -81,7 +81,7 @@ ___
 
 <br>
 
-## Ending Recursive Call with Base Cases
+## Ending Recursive Calls with Base Cases
 
 <br>
 
@@ -140,62 +140,62 @@ When we invoke factorial with 4, the function call of ``factorial(4)`` is first 
 
 Stack | Return Result
 ------------ | -------------
-factorial(4) | 4 * factorial(4 - 1)
+factorial(4) | 4 * factorial(3)
 
 When it runs factorial 4, it notices that it needs to invoke factorial again, so it will place ``factorial(3)`` on the call stack!
 
 Stack | Return Result
 ------------ | -------------
-factorial(3) | 3 * factorial(3 - 1)
-factorial(4) | 4 * factorial(4 - 1)
+factorial(3) | 3 * factorial(2)
+factorial(4) | 4 * factorial(3)
 
 Now we must run the factorial again, so off to the call stack it goes!
 
 Stack | Return Result
 ------------ | -------------
-factorial(2) | 2 * factorial(2 - 1)
-factorial(3) | 3 * factorial(3 - 1)
-factorial(4) | 4 * factorial(4 - 1)
+factorial(2) | 2 * factorial(1)
+factorial(3) | 3 * factorial(2)
+factorial(4) | 4 * factorial(3)
 
 Our call stack will grow until the item added onto the call stack meets the base case:
 
 Stack | Return Result
 ------------ | -------------
 factorial(0) | 1
-factorial(1) | 1 * factorial(1 - 1)
-factorial(2) | 2 * factorial(2 - 1)
-factorial(3) | 3 * factorial(3 - 1)
-factorial(4) | 4 * factorial(4 - 1)
+factorial(1) | 1 * factorial(0)
+factorial(2) | 2 * factorial(1)
+factorial(3) | 3 * factorial(2)
+factorial(4) | 4 * factorial(3)
 
 At this point in time, we now can "unwind" our call stack, because we actually know what the returned result for ``factorial(0)`` evaluates to. In our first unwind, we know that ``factorial(1 - 1)`` is 1, so we can now replace the return result for ``factorial(1)``
 
 Stack | Return Result
 ------------ | -------------
 factorial(0) | 1
-factorial(1) | 1 * 1
-factorial(2) | 2 * factorial(2 - 1)
-factorial(3) | 3 * factorial(3 - 1)
-factorial(4) | 4 * factorial(4 - 1)
+factorial(1) | 1
+factorial(2) | 2 * factorial(1)
+factorial(3) | 3 * factorial(2)
+factorial(4) | 4 * factorial(3)
 
 We can continue to unwind now, where we know what ``factorial(1)`` is, so we can update the return value for ``factorial(2)``
 
 Stack | Return Result
 ------------ | -------------
 factorial(0) | 1
-factorial(1) | 1 * 1
-factorial(2) | 2 * 1
-factorial(3) | 3 * factorial(3 - 1)
-factorial(4) | 4 * factorial(4 - 1)
+factorial(1) | 1
+factorial(2) | 2
+factorial(3) | 3 * factorial(2)
+factorial(4) | 4 * factorial(3)
 
 If we continue to unwind, we will eventually figure out what ``factorial(4)`` is!
 
 Stack | Return Result
 ------------ | -------------
 factorial(0) | 1
-factorial(1) | 1 * 1
-factorial(2) | 2 * 1
-factorial(3) | 3 * 2
-factorial(4) | 4 * 6
+factorial(1) | 1
+factorial(2) | 2
+factorial(3) | 6
+factorial(4) | 24
 
 ___
 
@@ -207,7 +207,7 @@ One of the downfalls of recursion is the space complexity of it's operations. Wh
 
 This can become a huge problem when we are working on larger inputs, and the growth in the call stack can be almost impossible to fully comprehend.
 
-Let's take a look at an example of this through the fibonacci sequence, and then talk about how we can fix it.
+Let's take a look at an example of this through the fibonacci sequence, and then talk about how we can improve it.
 
 ```js
 
@@ -219,7 +219,7 @@ function fib(n) {
 ```
 If we were to run this function with 5 as our initial input, we can actually visualize our recursive calls to in in a tree structure, where the two children of the node is the two recursive calls it would make:
 
-![courtesy of interviewcake](https://www.interviewcake.com/images/svgs/fibonacci__binary_tree_recursive.svg)
+![fib call graphic](https://www.interviewcake.com/images/svgs/fibonacci__binary_tree_recursive.svg)
 
 *graphic courtesy of interviewcake*
 
