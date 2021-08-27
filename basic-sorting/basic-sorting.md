@@ -149,7 +149,7 @@ arr[1] = arr[0];
 </details>
 
 
-So how can we overcome this problem? The answer is to use a placeholder!
+So how can we overcome this problem? The old answer is to use a placeholder!
 
 
 ```js
@@ -157,6 +157,29 @@ const arr = [1, 2, 3];
 let placeholder = arr[0];
 arr[0] = arr[1];
 arr[1] = placeholder;
+```
+
+But wait. With ECMA2015, we have been given access to the ``destructuring`` assignment. With the ``destructuring`` assignment, you are able to unpack values from arrays (or object properties), into distinct variables. What this means in practice is that we can create variables from arrays, where the values of the variables are assigned by the position within the array you are destructuring:
+
+```js
+let [a, b] = [10, 20];
+console.log(a, b);
+```
+
+So how can this be used for swapping variables? Why don't we create the array we are destructuring using the values we want to swap, and assign them back?
+
+```js
+let a = 10;
+let b = 20;
+[a, b] = [b, a];
+console.log(a, b);
+```
+
+And with some magical witchcraft, we can bring this back to the original problem. How can we swap array indices?
+
+```js
+const arr = [1, 2, 3];
+[arr[0], arr[1]] = [arr[1], arr[0]];
 ```
 
 ___
