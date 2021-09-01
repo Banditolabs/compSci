@@ -113,7 +113,7 @@ We can actually break down a merge sort into two phases: the ``divide`` and the 
 // find the middle point of the array
 // put everything left of the middle into a 'left' array
 // put everything right of (and including) the middle into a 'right' array
-// call the mergeSort recurisvily on the 'left' array, saving the result to another array
+// call the mergeSort recursively on the 'left' array, saving the result to another array
 // call the mergeSort recursively on the 'right' array, saving the result to another array
 // return the result of calling the merge helper, passing in the sorted left and sorted right arrays
 ```
