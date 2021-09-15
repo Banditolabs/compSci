@@ -109,7 +109,7 @@ For practical purposes, that means in the initial values for the floor should be
 2. Once you have calculated the ceilings and the floors, you can calculate the **midpoint**. The **midpoint** is going to be the index in the middle between the ceiling and the floor. You can calculate it as:
 
 ```
-((ceiling + plus) / 2) Rounded Down
+((ceiling + floor) / 2) Rounded Down
 ```
 
 3. Now that you have the index of the middle. You can check to see if the the array at the middle index is the element you are looking for. If it is, you, congratulations, you have found the value! 
