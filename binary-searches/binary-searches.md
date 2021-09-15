@@ -114,7 +114,7 @@ For practical purposes, that means in the initial values for the floor should be
 
 3. Now that you have the index of the middle. You can check to see if the the array at the middle index is the element you are looking for. If it is, you, congratulations, you have found the value! 
 
-4. If the middle point isn't the vale you are looking for, you should then check to see if the **ceiling** has met the **floor**, meaning that there is nothing between the ceiling and the floor. If that is the case, you know the value is not there!
+4. If the middle point isn't the value you are looking for, you should then check to see if the **ceiling** has met the **floor**, meaning that there is nothing between the ceiling and the floor. If that is the case, you know the value is not there!
 
 **❓ How can you tell if the ceiling met the floor?**
 
