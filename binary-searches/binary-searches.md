@@ -126,7 +126,7 @@ For practical purposes, that means in the initial values for the floor should be
 
 **❓ What are the two ways that we can do the repeat?**
 
-## A Visual Example of the Binary Search
+## An Example of the Binary Search
 
 Let's try to find out if ``11`` is in the array ``[1, 4, 6, 12, 34, 50]``
 
