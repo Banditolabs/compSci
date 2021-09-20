@@ -72,10 +72,10 @@ Because of the pointers, the *order* of nodes within a linked list are not given
 
 Operation | Worst Case Time Complexity
 ------------ | -------------
-Indexing (Access) | Θ(n)
-Insert/delete at beginning | Θ(1)
-Insert/delete at end | Θ(1) when last element is known; <br> Θ(n) when last element is unknown
-Insert/delete in middle | search time + Θ(1)
+Indexing (Access) | O(N)
+Insert/delete at beginning | O(1)
+Insert/delete at end | O(1) when last element is known
+Insert/delete in middle | search time + O(1)
 
 ---
 
@@ -263,11 +263,11 @@ If we were to convert this to code, it will look something like this
 // we are just saving the node to a variable
 let temp = walker.next.next;
 // point node with data of 7 to what node with data of 12 was looking at
-walker.next = temp.next
+walker.next.next = temp.next;
 // point the node with data of 12 to node with data of 7
-temp.next = walker.next
+temp.next = walker.next;
 // connect walker to node with data of 12
-walker.next = temp
+walker.next = temp;
 ```
 
 **❓ Is it possible to swap 7 and 12 without having a reference to what precedes 7?**
