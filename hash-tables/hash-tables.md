@@ -9,7 +9,7 @@
 	- Explain what a hashing algorithm is
     - Explain what hash collisions are
     - Solve hash collisions with open addressing
-    - Solve hash collision with closed addressing
+    - Solve hash collisions with closed addressing
     - Explain the advantages and disadvantages of open and closed addressing
 
 ---
