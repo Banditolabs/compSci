@@ -12,7 +12,6 @@
     - Compare and contrast breadth-first and depth-first searches
     - Traverse a binary tree with looping
     - Traverse a binary tree with recursion
-    - Describe the importance of balancing a binary tree
 
 ---
 ## Roadmap
@@ -25,7 +24,6 @@
 * Review JS object property accessing via bracket notation vs dot notation
 * Use looping to traverse a binary tree
 * Use recursion to traverse a binary tree
-* Explore the consequences of unbalanced trees
 * Work on the exercises in breakout rooms
 * Go over the solutions to the exercises
 
