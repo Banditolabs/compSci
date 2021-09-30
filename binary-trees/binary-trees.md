@@ -230,41 +230,6 @@ The code will probably look something like this:
 
 ___
 
-## The Importance of Balance for a Binary Tree
-
-When we were looking at the time complexity of our operations, we noticed that there was a stark difference between the worst case and average time complexity of a lot of our operations.
-
-To better understand this, we should first understand what ``Θ(log n)`` time complexity means. 
-
-At its core, ``Θ(log n)`` time complexity means that running time of the algorithm grows in proportion to the logarithm of the input size. But understanding a common attribute of a ``Θ(log n)`` algorithm may be a better way of understanding it. With a ``Θ(log n)`` algorithm, you have a choice of the next element on which to perform some action on, and you only need to pick one of those choices.
-
-Divide-and-conquer algorithms are considered logarithmic because you can cut your search area in half after every iteration.
-
-Let's take a look at this binary tree:
-
-![Balanced-Tree](https://imgur.com/mgUWM3w.png)
-
-This binary tree is considered **balanced** because all of the branches end within one level of each other. 
-
-If we were looking for the value of 7 in this binary tree, we will see that the search will be considered ``Θ(log n)``. Let's take a look at why that is
-
-* We will start at the root node with a value of 5
-* Since 7 is greater than 5, we move our walker to the node with a value of 10
-    * We have effectively cut out the entire subtree that begins with the node with a value of 3
-* Since 7 is less than 10, we will now move to the left, and find 7 there!
-    * Although we found what we were looking for, we have also cut out the entire subtree that begins with the node with a value of 12
-
-Now let's take a look at very clearly imbalanced binary tree:
-
-![Imbalanced Tree](https://imgur.com/xaIgsqm.png)
-
-* In this case, we will see that every node is on the right property of its parent node
-* If we were to search for the node with a value of 5 here, we would have to traverse the entire binary tree
-* Thus causing our time complexity to be ``Θ(n)``
-
-**❓ What data structure does the above image remind you of?**
-
-___
 
 ## Essential Questions
 1. How many direct parent nodes can any node in a tree have?
